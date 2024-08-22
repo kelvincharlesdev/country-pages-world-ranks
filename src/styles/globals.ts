@@ -7,6 +7,8 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
 }
 
 html, body, #root {

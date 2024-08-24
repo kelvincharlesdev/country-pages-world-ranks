@@ -3,6 +3,7 @@ import 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
+      bgHeader: string;
       bgPrimary: string;
       bgSecondary: string;
       action: string;

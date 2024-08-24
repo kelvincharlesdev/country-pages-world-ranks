@@ -11,7 +11,9 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400;
 }
 
-html, body, #root {
+    html, body, #root {
+    background-color: ${({ theme }) => theme.colors.bgPrimary};
+
     button {
         cursor: pointer;
         background: none;

@@ -17,11 +17,11 @@ export const Main = styled.main`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 20px 30px;
+  padding: 0 1.25rem 1.875rem;
 
   @media (max-width: 1024px) {
-    background: #1b1d1f;
-    padding: 0 0 30px;
+    background: ${({ theme }) => theme.colors.bgPrimary};
+    padding: 0 0 1.875rem;
   }
 `;
 
@@ -31,37 +31,37 @@ export const Content = styled.div`
   width: 95%;
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  border-radius: 15px;
-  border: 1px solid #282b30;
+  padding: 1.875rem;
+  border-radius: 0.9375rem;
+  border: 1px solid ${({ theme }) => theme.colors.bgSecondary};
 `;
 
 export const Container__Searcher = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 1.25rem;
 `;
 
 export const Description__Found__Countries = styled.h2`
-  color: #6c727f;
-  font-size: 14px;
+  color: ${({ theme }) => theme.colors.textSecondary};
+  font-size: ${({ theme }) => theme.size.medium};
   white-space: nowrap;
 
   @media (max-width: 780px) {
-    font-size: 12px;
+    font-size: ${({ theme }) => theme.size.small};
   }
 `;
 
 export const Input__Content = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   height: 30px;
   max-width: 300px;
   min-width: 50px;
   width: 100%;
-  border-radius: 7px;
+  border-radius: 0.4375rem;
   padding: 0 10px;
   background-color: ${({ theme }) => theme.colors.bgSecondary};
 
@@ -71,8 +71,8 @@ export const Input__Content = styled.div`
   }
 
   input {
-    font-size: 12px;
-    color: #d2d5da;
+    font-size: ${({ theme }) => theme.size.small};
+    color: ${({ theme }) => theme.colors.textPrimary};
     height: 100%;
     width: 100%;
     flex: 1;
@@ -81,8 +81,8 @@ export const Input__Content = styled.div`
     white-space: nowrap;
   }
   input::placeholder {
-    font-size: 12px;
-    color: #6c727f;
+    font-size: ${({ theme }) => theme.size.small};
+    color: ${({ theme }) => theme.colors.textSecondary};
   }
 `;
 
@@ -90,7 +90,7 @@ export const Info__Countries__Wrapper = styled.div`
   display: flex;
   margin-top: 30px;
   width: 100%;
-  gap: 30px;
+  gap: 1.875rem;
 
   @media (max-width: 780px) {
     flex-direction: column;
@@ -103,11 +103,11 @@ export const Info__Filters__Countries = styled.div`
   width: 30%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 
   h4 {
-    color: #6c727f;
-    font-size: 12px;
+    color: ${({ theme }) => theme.colors.textSecondary};
+    font-size: ${({ theme }) => theme.size.small};
   }
 
   @media (max-width: 780px) {
@@ -118,7 +118,7 @@ export const Info__Filters__Countries = styled.div`
 export const Sort__By__Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 `;
 
 export const Selected = styled.div``;
@@ -126,11 +126,11 @@ export const Selected = styled.div``;
 export const Input__Selected = styled.div`
   height: 40px;
   width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #6c727f;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
+  border: 1px solid ${({ theme }) => theme.colors.textSecondary};
   background-color: transparent;
-  color: #d2d5da;
+  color: ${({ theme }) => theme.colors.textPrimary};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -139,33 +139,33 @@ export const Input__Selected = styled.div`
 export const Region__Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 `;
 
 export const Content__Items = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.625rem;
 `;
 
 export const Status__Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 `;
 
 export const Status__Items = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 0.4375rem;
 `;
 
 export const CheckboxContainer = styled.label`
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.size.medium};
 
   input {
     display: none;
@@ -174,33 +174,31 @@ export const CheckboxContainer = styled.label`
   input + span::before {
     content: '';
     display: inline-block;
-    width: 25px; /* Largura do checkbox */
-    height: 25px; /* Altura do checkbox */
-    background-color: transparent; /* Cor de fundo */
-    border: 3px solid #6c727f; /* Borda padrão */
-    border-radius: 4px; /* Bordas arredondadas */
-    margin-right: 8px; /* Espaço entre o checkbox e o texto */
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: 3px solid ${({ theme }) => theme.colors.textSecondary};
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
     transition:
       background-color 0.3s,
       border-color 0.3s;
   }
 
-  /* Estilos para quando o checkbox é marcado */
   input:checked + span::before {
-    background-color: #4e80ee; /* Cor de fundo quando marcado */
-    border-color: #4e80ee; /* Cor da borda quando marcado */
-    background-image: url('/Done_round.svg'); /* Caminho da imagem */
-    background-size: cover; /* Ajusta o tamanho da imagem ao checkbox */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem seja repetida */
+    background-color: ${({ theme }) => theme.colors.action};
+    border-color: ${({ theme }) => theme.colors.action};
+    background-image: url('/Done_round.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
-  /* Ajuste de estilo para o texto ao lado do checkbox */
   span {
-    font-size: 14px;
+    font-size: ${({ theme }) => theme.size.medium};
     display: flex;
     align-items: center;
-    color: #d2d5da;
+    color: ${({ theme }) => theme.colors.textPrimary};
   }
 `;
 
@@ -211,22 +209,22 @@ export const Table = styled.table`
   width: 100%;
 
   thead {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #6c727f;
-    color: #6c727f;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.textSecondary};
+    color: ${({ theme }) => theme.colors.textSecondary};
   }
 
   thead th {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
   }
 
   tbody td {
-    padding: 10px;
+    padding: 0.625rem;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     max-width: 100px;
-    color: #d2d5da;
+    color: ${({ theme }) => theme.colors.textPrimary};
   }
 
   th,

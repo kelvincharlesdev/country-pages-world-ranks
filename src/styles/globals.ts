@@ -16,7 +16,6 @@ export const GlobalStyles = createGlobalStyle`
 
     button {
         cursor: pointer;
-        background: none;
         border: none;
     }
 
@@ -27,6 +26,18 @@ export const GlobalStyles = createGlobalStyle`
     ul {
         list-style: none;
     }
+
+    input {
+        border: none; 
+        outline: none; 
+        background: none; 
+ 
+    }
+
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 }
 `;

@@ -1,11 +1,11 @@
+import { Image } from '../Image';
+
 import * as S from './Table.style';
 import * as I from './Table.interface';
-import { Image } from '../Image';
 
 export const Table = ({ filteredCountries }: I.TableProps) => {
   const formatNumber = (value: number) => {
     const integerValue = Math.round(value);
-
     return integerValue.toLocaleString('en-US');
   };
 

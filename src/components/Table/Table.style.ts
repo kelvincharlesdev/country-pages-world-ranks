@@ -25,6 +25,10 @@ export const Table = styled.table`
     white-space: nowrap;
     max-width: 100px;
     color: ${({ theme }) => theme.colors.textPrimary};
+
+    a {
+      color: ${({ theme }) => theme.colors.textPrimary};
+    }
   }
 
   th,

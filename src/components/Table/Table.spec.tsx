@@ -2,7 +2,8 @@ import { render, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import { Table } from './Table';
 import { theme } from '../../styles/theme';
-import { Countries } from '../../page';
+import { Countries } from '../../types/countries';
+import { MemoryRouter } from 'react-router-dom';
 
 describe('Component <Table/>', () => {
   const filterTeste: Countries[] = [
@@ -19,9 +20,11 @@ describe('Component <Table/>', () => {
 
   it('Should render component', () => {
     render(
-      <ThemeProvider theme={theme}>
-        <Table filteredCountries={filterTeste} />
-      </ThemeProvider>
+      <MemoryRouter>
+        <ThemeProvider theme={theme}>
+          <Table filteredCountries={filterTeste} />
+        </ThemeProvider>
+      </MemoryRouter>
     );
 
     const table = screen.getByTestId('table-test');
@@ -31,9 +34,11 @@ describe('Component <Table/>', () => {
 
   it('Should render content', () => {
     render(
-      <ThemeProvider theme={theme}>
-        <Table filteredCountries={filterTeste} />
-      </ThemeProvider>
+      <MemoryRouter>
+        <ThemeProvider theme={theme}>
+          <Table filteredCountries={filterTeste} />
+        </ThemeProvider>
+      </MemoryRouter>
     );
 
     const name = screen.getByText('teste');

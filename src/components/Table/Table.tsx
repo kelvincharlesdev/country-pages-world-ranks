@@ -1,14 +1,12 @@
+import { Link } from 'react-router-dom';
+
 import { Image } from '../Image';
+import { formatNumber } from '../../utils/formatNumber';
 
 import * as S from './Table.style';
 import * as I from './Table.interface';
 
 export const Table = ({ filteredCountries }: I.TableProps) => {
-  const formatNumber = (value: number) => {
-    const integerValue = Math.round(value);
-    return integerValue.toLocaleString('en-US');
-  };
-
   return (
     <S.Table data-testid="table-test">
       <thead>
@@ -24,15 +22,22 @@ export const Table = ({ filteredCountries }: I.TableProps) => {
         {filteredCountries.map(country => (
           <tr key={country.name.common}>
             <td className="col1">
-              <S.ContentImage>
-                <Image src={country.flags.svg} alt={country.name.common} />
-              </S.ContentImage>
+              <Link to={`name/${country.name.common}`}>
+                <S.ContentImage>
+                  <Image src={country.flags.svg} alt={country.name.common} />
+                </S.ContentImage>
+              </Link>
             </td>
-            <td>{country.name.common}</td>
+            <td>
+              <Link to={`name/${country.name.common}`}>
+                {country.name.common}
+              </Link>
+            </td>
             <td>{formatNumber(country.population)}</td>
             <td>{formatNumber(country.area)}</td>
             <td>{country.region}</td>
           </tr>
+          // </Link>
         ))}
       </tbody>
     </S.Table>

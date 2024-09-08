@@ -89,7 +89,7 @@ export const CheckboxContainer = styled.label`
   input:checked + span::before {
     background-color: ${({ theme }) => theme.colors.action};
     border-color: ${({ theme }) => theme.colors.action};
-    background-image: url('/Done_round.svg');
+    background-image: url('/done_round.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

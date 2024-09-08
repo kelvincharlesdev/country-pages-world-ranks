@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <S.Header>
       <S.ContentImage>
-        <Image src="/Logo.svg" alt="Logo" />
+        <Image src="/logo.svg" alt="Logo" />
       </S.ContentImage>
     </S.Header>
   );

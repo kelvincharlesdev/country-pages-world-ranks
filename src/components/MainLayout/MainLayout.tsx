@@ -1,6 +1,6 @@
+import { Header } from '../Header';
 import * as S from './MainLayout.styles';
 
-import { Header } from '../Header/Header.styles';
 import { Outlet } from 'react-router-dom';
 
 export const MainLayout = () => {

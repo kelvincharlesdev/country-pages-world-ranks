@@ -2,12 +2,12 @@ import * as S from './SpinnerCircular.styles';
 import * as I from './SpinnerCircular.interface';
 
 export const SpinnerCircular = ({
-  borderColor,
+  $borderColor: borderColor,
   borderTopColor
 }: I.SpinnerCircularProps) => {
   return (
     <S.SpinnerContainer
-      borderColor={borderColor}
+      $borderColor={borderColor}
       borderTopColor={borderTopColor}
       data-testid="spinner-circular"
     ></S.SpinnerContainer>

@@ -1,4 +1,4 @@
 export interface SpinnerCircularProps {
-  borderColor: string;
+  $borderColor: string;
   borderTopColor?: string;
 }

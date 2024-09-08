@@ -41,13 +41,9 @@ export const Content = styled.div`
   margin-top: -60px;
 `;
 
-export const Country__Content = styled.div`
-  background-color: red;
-`;
-
 export const Content__Image = styled.div`
   width: 300px;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   overflow: hidden;
   margin-top: -3.125rem;
 `;
@@ -55,9 +51,9 @@ export const Content__Image = styled.div`
 export const Content__Title = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
   color: ${({ theme }) => theme.colors.textPrimary};
-  margin-top: 30px;
+  margin-top: 1.875rem;
   text-align: center;
 
   h1 {
@@ -71,9 +67,17 @@ export const Content__Title = styled.div`
 export const Content__Info = styled.div`
   color: ${({ theme }) => theme.colors.textPrimary};
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 3.75rem;
+  margin-top: 2.8125rem;
+
+  @media (max-width: 620px) {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
 `;
 
 export const Info_Population__Area = styled.div`
@@ -86,7 +90,6 @@ export const Info_Population__Area = styled.div`
   justify-content: space-around;
   padding: 0.9375rem 1.625rem;
   gap: 1.25rem;
-  margin-top: 2.8125rem;
 
   span {
     height: 80%;
@@ -98,7 +101,6 @@ export const Info_Population__Area = styled.div`
 export const Content__Info__Additional = styled.ul`
   display: flex;
   flex-direction: column;
-
   width: 100%;
   margin-top: 2.1875rem;
 

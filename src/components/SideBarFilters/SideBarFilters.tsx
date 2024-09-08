@@ -23,7 +23,7 @@ export const SideBarFilters = ({
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
 
-    if (name === 'memberU-nited-nations') {
+    if (name === 'member-united-nations') {
       setIsMember(checked);
     } else if (name === 'independent') {
       setIsIndependent(checked);
@@ -95,7 +95,7 @@ export const SideBarFilters = ({
           <S.CheckboxContainer>
             <input
               type="checkbox"
-              name="memberU-nited-nations"
+              name="member-united-nations"
               checked={isMember}
               onChange={handleCheckboxChange}
             />

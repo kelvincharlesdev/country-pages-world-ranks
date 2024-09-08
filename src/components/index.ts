@@ -4,3 +4,4 @@ export * from './Button';
 export * from './SpinnerLCircular';
 export * from './Table';
 export * from './SideBarFilters';
+export * from './MainLayout';

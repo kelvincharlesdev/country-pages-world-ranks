@@ -1,7 +1,8 @@
 import styled, { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
 import { GlobalStyles } from './styles/globals';
-import { HomePage } from './page';
+
+import { CountryRoutes } from './routes/routes';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -14,7 +15,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Container>
-        <HomePage />
+        <CountryRoutes />
       </Container>
     </ThemeProvider>
   );

@@ -3,14 +3,14 @@ import { SpinnerCircular } from './SpinnerCircular';
 
 describe('component <SpinnerCircular/>', () => {
   it('Should render component', () => {
-    render(<SpinnerCircular borderColor="" />);
+    render(<SpinnerCircular $borderColor="" />);
 
     const spinner = screen.getByTestId('spinner-circular');
     expect(spinner).toBeInTheDocument();
   });
 
   it('Should render with default styles', () => {
-    render(<SpinnerCircular borderColor="" borderTopColor="" />);
+    render(<SpinnerCircular $borderColor="" borderTopColor="" />);
     const spinner = screen.getByTestId('spinner-circular');
 
     expect(spinner).toHaveStyle({
@@ -20,7 +20,7 @@ describe('component <SpinnerCircular/>', () => {
     });
   });
   it('Should render with correct styles passed via props', () => {
-    render(<SpinnerCircular borderColor="#054789" borderTopColor="#985456" />);
+    render(<SpinnerCircular $borderColor="#054789" borderTopColor="#985456" />);
     const spinner = screen.getByTestId('spinner-circular');
 
     expect(spinner).toHaveStyle({

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
 import {
-  Header,
   Image,
   SideBarFilters,
   SpinnerCircular,
@@ -72,8 +71,6 @@ export const HomePage = () => {
 
   return (
     <S.Home__Wrapper>
-      <Header />
-
       <S.Main>
         <S.Content>
           <S.Container__Searcher>
@@ -107,7 +104,7 @@ export const HomePage = () => {
             <S.Wrapper__Table>
               {isLoading ? (
                 <S.Content__Spinner>
-                  <SpinnerCircular borderColor={theme.colors.action} />
+                  <SpinnerCircular $borderColor={theme.colors.action} />
                 </S.Content__Spinner>
               ) : (
                 <Table filteredCountries={filteredCountries} />

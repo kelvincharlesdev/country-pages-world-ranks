@@ -12,7 +12,8 @@ export const SpinnerContainer = styled.div<I.SpinnerCircularProps>`
   width: 2rem;
   height: 2rem;
   border: 0.2rem solid
-    ${({ borderColor }) => (borderColor ? borderColor : '#ffffff')};
+    ${({ $borderColor: borderColor }) =>
+      borderColor ? borderColor : '#ffffff'};
   border-top: 0.4rem solid
     ${({ borderTopColor }) => (borderTopColor ? borderTopColor : 'transparent')};
   border-radius: 50%;
